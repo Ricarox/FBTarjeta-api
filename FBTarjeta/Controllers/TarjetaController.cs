@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FBTarjeta.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,24 +14,43 @@ namespace FBTarjeta.Controllers
     [ApiController]
     public class TarjetaController : ControllerBase
     {
+
+        private readonly AplicationDbContext _context;
+
+        public TarjetaController(AplicationDbContext context)
+        {
+            _context = context;
+        }
         // GET: api/<TarjetaController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
-        }
+            try
+            {
+                var listTarjetas = await _context.TarjetaCredito.ToListAsync();
+                return Ok(listTarjetas);
+            }
+            catch (Exception ex)
+            {
 
-        // GET api/<TarjetaController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
+                return BadRequest(ex.Message);
+            }
         }
 
         // POST api/<TarjetaController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post([FromBody] TarjetaCredito tarjeta)
         {
+            try
+            {
+                _context.Add(tarjeta);
+               await _context.SaveChangesAsync();
+                return Ok(tarjeta);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // PUT api/<TarjetaController>/5
