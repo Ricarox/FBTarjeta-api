@@ -35,6 +35,11 @@ namespace FBTarjeta
             services.AddDbContext<AplicationDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
 
+            services.AddCors(options => options.AddPolicy("AllowWebApp",
+                                builder => builder.AllowAnyOrigin()
+                                                  .AllowAnyHeader()
+                                                  .AllowAnyMethod()));
+
         }
         private void AddSwagger(IServiceCollection services)
         {
@@ -72,6 +77,8 @@ namespace FBTarjeta
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Foo API V1");
             });
+
+            app.UseCors("AllowWebApp");
 
             app.UseRouting();
 
