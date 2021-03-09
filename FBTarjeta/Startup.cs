@@ -33,7 +33,7 @@ namespace FBTarjeta
 
 
             services.AddDbContext<AplicationDbContext>(options =>
-                    options.UseSqlServer());
+                    options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
 
         }
         private void AddSwagger(IServiceCollection services)
