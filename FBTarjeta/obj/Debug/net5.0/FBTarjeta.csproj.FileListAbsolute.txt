@@ -21,3 +21,9 @@ C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresq
 C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresqlserver\FBTarjeta\FBTarjeta\obj\Debug\net5.0\ref\FBTarjeta.dll
 C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresqlserver\FBTarjeta\FBTarjeta\obj\Debug\net5.0\FBTarjeta.pdb
 C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresqlserver\FBTarjeta\FBTarjeta\obj\Debug\net5.0\FBTarjeta.genruntimeconfig.cache
+C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresqlserver\FBTarjeta\FBTarjeta\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresqlserver\FBTarjeta\FBTarjeta\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresqlserver\FBTarjeta\FBTarjeta\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresqlserver\FBTarjeta\FBTarjeta\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresqlserver\FBTarjeta\FBTarjeta\obj\Debug\net5.0\FBTarjeta.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ricardo\Proyectos\Udemy\crud-angular-9-net-core-entity-framework-coresqlserver\FBTarjeta\FBTarjeta\obj\Debug\net5.0\FBTarjeta.csproj.CopyComplete
