@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FBTarjeta
 {
@@ -29,6 +30,11 @@ namespace FBTarjeta
 
             services.AddControllers();
             AddSwagger(services);
+
+
+            services.AddDbContext<AplicationDbContext>(options =>
+                    options.UseSqlServer());
+
         }
         private void AddSwagger(IServiceCollection services)
         {
